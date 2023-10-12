@@ -35,7 +35,7 @@ class GuestbookEntry {
 
 	private @Id @GeneratedValue Long id;
 	private final String name, text;
-	private final int rating;
+	private final Integer rating;
 	private final LocalDateTime date;
 
 
@@ -45,10 +45,11 @@ class GuestbookEntry {
 	 * @param name must not be {@literal null} or empty
 	 * @param text must not be {@literal null} or empty
 	 */
-	public GuestbookEntry(String name, String text) {
+	public GuestbookEntry(String name, String text,int rating) {
 
 		Assert.hasText(name, "Name must not be null or empty!");
 		Assert.hasText(text, "Text must not be null or empty!");
+
 
 		this.name = name;
 		this.text = text;
@@ -80,5 +81,5 @@ class GuestbookEntry {
 		return text;
 	}
 
-	public int getRating(){ return rating; }
+	public Integer getRating(){ return rating; }
 }
