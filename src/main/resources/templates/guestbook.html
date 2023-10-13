@@ -10,11 +10,6 @@
 		<title th:text="#{guestbook.title}">Gästebuch</title>
 	</head>
 	<body>
-		<div class="marquee-container">
-			<div class="marquee-content">
-				Hier läuft der Text durch!
-			</div>
-		</div>
 		<h1 class="text-center" th:text="#{guestbook.title}">Gästebuch</h1>
 		<div class="text-center">
 			<a sec:authorize="isAnonymous()" href="/login">Login</a>
@@ -34,7 +29,7 @@
 								<span class="fas fa-times"></span>
 							</button>
 						</form>
-						<h4 th:text="${index} + '. ' + ${entry.name} + ' '+ ${entry.rating} + '/5 Sterne'" class="card-title">1. Posting</h4>
+						<h4 th:text="${index} + '. ' + ${entry.name}" class="card-title">1. Posting</h4>
 					</div>
 					<div class="card-body">
 						<blockquote class="entrytext" th:text="${entry.text}"></blockquote>
