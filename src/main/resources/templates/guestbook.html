@@ -10,12 +10,12 @@
 		<title th:text="#{guestbook.title}">Gästebuch</title>
 	</head>
 	<body>
-		<h1 class="text-center" th:text="#{guestbook.title}">Gästebuch</h1>
-		<div th:if="${not #lists.isEmpty(entries)}">
-			<div>
-				Durchschnittliche Bewertung:
+		<div class="marquee-container">
+			<div class="marquee-content">
+				Hier läuft der Text durch!
 			</div>
 		</div>
+		<h1 class="text-center" th:text="#{guestbook.title}">Gästebuch</h1>
 		<div class="text-center">
 			<a sec:authorize="isAnonymous()" href="/login">Login</a>
 			<a sec:authorize="isAuthenticated()" href="/logout">Logout</a>
@@ -78,9 +78,8 @@
 				document.getElementById('rating').value = rating;
 				for (let i = 1; i <= 5; i++) {
 					const button = document.getElementById('button' + i);
-					console.log(button);
 					if (i === rating) {
-						button.style.backgroundColor = 'yellow';
+						button.style.backgroundColor = 'blue';
 					} else {
 						button.style.backgroundColor = '';
 					}
