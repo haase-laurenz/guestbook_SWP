@@ -32,10 +32,10 @@ body {
 
 
 #submitBtn {
-    margin-top: 10px; /* Ändere den Wert nach Bedarf, um den gewünschten Abstand zu erhalten */
-    display: block; /* Stellt sicher, dass der Button ein Blockelement ist */
-    margin-left: auto; /* Zentriert den Button horizontal */
-    margin-right: auto; /* Zentriert den Button horizontal */
+    margin-top: 10px; 
+    display: block; 
+    margin-left: auto; 
+    margin-right: auto; 
 	background-color: #194bd4; 
     color: #ffffff; 
 	
