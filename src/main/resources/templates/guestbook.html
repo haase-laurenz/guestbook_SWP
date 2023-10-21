@@ -10,6 +10,11 @@
 		<title th:text="#{guestbook.title}">Gästebuch</title>
 	</head>
 	<body>
+		<div class="marquee-container">
+			<div class="marquee-content">
+				Erstelle einen neuen Eintrag!
+			</div>
+		</div>
 		<h1 class="text-center" th:text="#{guestbook.title}">Gästebuch</h1>
 		<div class="text-center">
 			<a sec:authorize="isAnonymous()" href="/login">Login</a>
@@ -29,7 +34,7 @@
 								<span class="fas fa-times"></span>
 							</button>
 						</form>
-						<h4 th:text="${index} + '. ' + ${entry.name}" class="card-title">1. Posting</h4>
+						<h4 th:text="${index} + '. ' + ${entry.name} + ' '+ ${entry.rating} + '/5-Sterne'" class="card-title">1. Posting</h4>
 					</div>
 					<div class="card-body">
 						<blockquote class="entrytext" th:text="${entry.text}"></blockquote>
@@ -64,7 +69,7 @@
 				<textarea th:field="*{text}" th:errorclass="is-invalid" class="form-control" required="required"></textarea>
 				<div th:if="${#fields.hasErrors('text')}" class="invalid-feedback" th:text="#{guestbook.form.text.required}">Please provide a text.</div>
 			</div>
-			<input type="submit" class="btn btn-secondary" th:value="#{guestbook.form.submit}" value="Senden" />
+			<input type="submit" class="btn btn-secondary" id="submitBtn" th:value="#{guestbook.form.submit}" value="Senden" />
 		</form>
 
 		<script>
@@ -74,7 +79,7 @@
 				for (let i = 1; i <= 5; i++) {
 					const button = document.getElementById('button' + i);
 					if (i === rating) {
-						button.style.backgroundColor = 'blue';
+						button.style.backgroundColor = 'rgba(0, 64, 234, 0.46)';
 					} else {
 						button.style.backgroundColor = '';
 					}

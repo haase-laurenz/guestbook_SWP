@@ -27,6 +27,18 @@ form#form {
 body {
 	background-color: rgba(0, 64, 234, 0.46);
 	color: #FFFFFF;
+	
+}
+
+
+#submitBtn {
+    margin-top: 10px; /* Ändere den Wert nach Bedarf, um den gewünschten Abstand zu erhalten */
+    display: block; /* Stellt sicher, dass der Button ein Blockelement ist */
+    margin-left: auto; /* Zentriert den Button horizontal */
+    margin-right: auto; /* Zentriert den Button horizontal */
+	background-color: #194bd4; 
+    color: #ffffff; 
+	
 }
 
 .marquee-container {

@@ -45,11 +45,11 @@ class GuestbookEntry {
 	 * @param name must not be {@literal null} or empty
 	 * @param text must not be {@literal null} or empty
 	 */
-	public GuestbookEntry(String name, String text,int rating) {
+	public GuestbookEntry(String name, String text,Integer rating) {
 
 		Assert.hasText(name, "Name must not be null or empty!");
 		Assert.hasText(text, "Text must not be null or empty!");
-
+		Assert.hasText(rating.toString(),"Rating must not be null");
 
 		this.name = name;
 		this.text = text;
